@@ -25,7 +25,7 @@
       |-- SCSS
          |-- styles.scss
          |-- styles.css
-    ```
+```
             
 4. Navigate to directory with scss files 
 
@@ -34,12 +34,13 @@
 
 6. You should now get this in your terminal:
 
-`Compiled styles.scss to styles.css.
-Sass is watching for changes. Press Ctrl-C to stop.
-`
+``
+  Compiled styles.scss to styles.css.
+  Sass is watching for changes. Press Ctrl-C to stop.
+``
 
-**Note:** a *style.css.map* file will be created in your SASS directory
+  Note: a *style.css.map* file will be created in your SASS directory
 
-**Note:** the **styles.scss** file is now where you will do all your edits! :joy: 
+  Note: the **styles.scss** file is now where you will do all your edits! :joy: 
 
 6. Now, you can create your partials (ie variables file _variables.scss) and @import to your styles.scss file
