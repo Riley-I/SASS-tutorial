@@ -12,21 +12,24 @@
   - most commonly used syntax
   - uses curly brackets & semi-colons
   
-```.content {
+`
+.content {
   background-color: $primary-color;
   color: $light;
   }
-```
+`
 
 ## Benefits:
   - makes CSS more efficient
   - makes stylesheets more maintainable
   - Allows use of variables, nested rules, mixins, functions etc.
   - free / open source
+  - very flexible (can use any combination of functionality or, for example, only use variable)
   
 ## Comments
-  ``` /* standard css comments work! */ ```
-  ``` // inline comments also work! ```
+  ` /* standard css comments work! */ `
+  
+  ` // inline comments also work! `
 
 ## Preprocessing
 
@@ -40,7 +43,9 @@ Sass uses the **$** symbol to make something a variable
     $secondary: #b2ad7f;
     $tertiary: #878f99;
 
+
   /* use the variables */
+  
   .main-header {
     background-color: $primary;
   }
@@ -56,12 +61,10 @@ Sass uses the **$** symbol to make something a variable
 
 https://sass-lang.com/documentation/variables
 
-### Built-in modules
-https://sass-lang.com/documentation/modules
-
 ## Nesting
 
-`nav {
+`
+nav {
   ul {
     margin: 0;
     padding: 0;
@@ -77,14 +80,15 @@ https://sass-lang.com/documentation/modules
       padding: 6px 12px;
       text-decoration: none;
     }
-}`
+}
+`
 
 
 ## Partials
-A way modularize your CSS and help keep things easier to maintain
-A partial is a Sass file named with a leading underscore
-The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file. 
-Sass partials are used with the @use rule.
+- A way modularize your CSS and help keep things easier to maintain
+- A partial is a Sass file named with a leading underscore
+- The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file. 
+- Sass partials are used with the @use or @import (older) rule.
 
 eg. `_variables.scss`
 
@@ -92,6 +96,13 @@ in styles.scss put
 `@import "variables";` //variables come first so other sass files can use them!
 
 ## Modules
+- developed to solve some issues with @import used with partials
+- newer functionality
+- built-in modules: — math, color, string, list, map, selector, and meta
+
+[css-tricks.com/introducing-sass-modules/](https://css-tricks.com/introducing-sass-modules/)
+
+[sass-lang.com/documentation/modules](https://sass-lang.com/documentation/modules)
 
 ## Mixins
 
@@ -102,6 +113,21 @@ groups of CSS declarations that you want to reuse throughout your site
 ## Extra
 
 ### Extend/Inheritance
+- Addresses the situation where one class should have all the styles of another class, as well as its own specific styles
+- Sass’s @extend rule solves this.
+- it tells Sass that one selector should inherit the styles of another.
+
+` 
+.awesome-class {
+  border: 1px #f00;
+  background-color: #fdd;
+
+  &--serious {
+    @extend .awesome-class;
+    border-width: 3px;
+  }
+}
+`
 
 ### Operators
 
