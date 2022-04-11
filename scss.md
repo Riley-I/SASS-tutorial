@@ -12,12 +12,12 @@
   - most commonly used syntax
   - uses curly brackets & semi-colons
   
-`
-.content {
-  background-color: $primary-color;
-  color: $light;
-  }
-`
+```
+  .content {
+    background-color: $primary-color;
+    color: $light;
+    }
+```
 
 ## Benefits:
   - makes CSS more efficient
@@ -63,25 +63,24 @@ https://sass-lang.com/documentation/variables
 
 ## Nesting
 
-`
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+```
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+      li { 
+      display: inline-block; 
+      }
+
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+      }
   }
-
-    li { 
-    display: inline-block; 
-    }
-
-    a {
-      display: block;
-      padding: 6px 12px;
-      text-decoration: none;
-    }
-}
-`
+```
 
 
 ## Partials
@@ -106,9 +105,29 @@ in styles.scss put
 
 ## Mixins
 
-groups of CSS declarations that you want to reuse throughout your site
+- groups of CSS declarations that you want to reuse throughout your site
 
-@mixin directive and give it a name
+- @mixin directive and give it a name
+- uses @include at-rule
+
+```
+   @mixin clear-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+```
+
+```  
+   nav ul {
+    @include clear-list;
+  }
+```
+  
+
+- Mixins can also take arguments, which allows their behavior to be customized each time they’re called.
+
+[/sass-lang.com/documentation/at-rules/mixin](https://sass-lang.com/documentation/at-rules/mixin)
 
 ## Extra
 
