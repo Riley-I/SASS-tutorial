@@ -1,0 +1,18 @@
+/* VARIABLES */
+h1 {
+  color: rgba(204, 204, 204, 0.8);
+}
+
+/*NESTING*/
+ul {
+  display: flex;
+  list-style: none;
+}
+ul li {
+  padding: 10px;
+}
+ul li a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
