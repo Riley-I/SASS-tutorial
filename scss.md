@@ -136,17 +136,17 @@ in styles.scss put
 - Sass’s @extend rule solves this.
 - it tells Sass that one selector should inherit the styles of another.
 
-` 
-.awesome-class {
-  border: 1px #f00;
-  background-color: #fdd;
+``` 
+  .awesome-class {
+    border: 1px #f00;
+    background-color: #fdd;
 
-  &--serious {
-    @extend .awesome-class;
-    border-width: 3px;
+    &--serious {
+      @extend .awesome-class;
+      border-width: 3px;
+    }
   }
-}
-`
+```
 
 ### Operators
 
