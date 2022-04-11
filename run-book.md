@@ -1,6 +1,6 @@
 # SASS Set-up Run-book
 
-*if node.js is installed can use:*
+*if node.js is installed can install SASS using NPM:*
 
 1. `npm install -g sass` 
 
@@ -9,6 +9,9 @@
 
 Or try:
 `sudo apt install ruby-sass`
+
+Check it installed correctly
+`sass --version`
 
 3. Create your directories, an *index.html* file and a *styles.scss*.
 **Note:** *styles.css* will be created automatically on first --sass watch command but you can create it too if you'd like*
